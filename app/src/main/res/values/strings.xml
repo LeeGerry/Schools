@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Schools</string>
+    <string name="school_name">School Name: %s</string>
+    <string name="school_number_of_tester">Number of Tester: %s</string>
+    <string name="school_avg_score">Avg Score: %s</string>
+    <string name="generic_error">error</string>
+    <string name="empty_details">empty details</string>
+</resources>
