@@ -24,7 +24,7 @@ class SchoolListViewModelShould : BaseUnitTest() {
     fun `get school list from repository`() = runTest {
         val viewModel = mockSuccessfulCase()
         viewModel.schoolList.getValueForTest()
-        verify(repository, times(2)).getSchools()
+        verify(repository, times(1)).getSchools()
     }
 
     @Test
