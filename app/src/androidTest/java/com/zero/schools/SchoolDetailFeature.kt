@@ -22,6 +22,6 @@ class SchoolDetailFeature : BaseUiTest() {
             )
         ).perform(ViewActions.click())
         assertDisplayed("School Name: LIBERATION DIPLOMA PLUS")
-        assertDisplayed("Avg Score: 384.3")
+        assertDisplayed("Avg Score: 384.33")
     }
 }
