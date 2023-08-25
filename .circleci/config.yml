@@ -3,15 +3,18 @@ version: 2.1
 jobs:
   say-hello:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:2022.05
     steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, Android project!"
-      - run: java --version
+      - run: echo "Say hello to yml!"
+
+  say-bye:
+    docker:
+      - image: cimg/base:2022.05
+    steps:
+      - run: echo "Say bye to yml!"
 
 workflows:
-  say-hello-workflow:
+  hello_and_goodbye:
     jobs:
       - say-hello
+      - say-bye
