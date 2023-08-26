@@ -1,20 +1,14 @@
 version: 2.1
 
 jobs:
-  say-hello:
+  build:
+    working_directory: ~/code
     docker:
-      - image: cimg/base:2022.05
+      - image: ccistaging/android:api-30
+    environment:
+      JVM_OPTS: -Xmx3200m
     steps:
-      - run: echo "Say hello to yml!"
-
-  say-bye:
-    docker:
-      - image: cimg/base:2022.05
-    steps:
-      - run: echo "Say bye to yml!"
-
-workflows:
-  hello_and_goodbye:
-    jobs:
-      - say-hello
-      - say-bye
+      - checkout
+      - run:
+          name: Chmod permissions
+          command: sudo chmod +x ./gradlew
