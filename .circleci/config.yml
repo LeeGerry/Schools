@@ -12,3 +12,6 @@ jobs:
       - run:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
+      - run:
+          name: Download dependencies
+          command: ./gradlew androidDependencies
